@@ -15,7 +15,7 @@
 <center class="p-5">
 <div class="container">
    <strong><h4>REGISTRO PERSONA</h4></strong>
-    <form action="">
+    <form action="../Controlador/registroUsuarios.php" method="POST" autocomplete="off">
         <div class="row">
             <div class="col-25">
             </div>
@@ -60,7 +60,7 @@
             <div class="col-25">
             </div>
             <div class="col-75">
-                <input type="number" id="" name="email" placeholder="E-MAIL">
+                <input type="email" id="" name="email" placeholder="E-MAIL">
             </div>
         </div>
          <div class="row">
