@@ -1,6 +1,6 @@
 <?php
-//conexion
-require_once '../includes/conexion.php';
+//conexion 
+require_once 'includes/conexion.php';
 
 //COMPROBAR SI LLEGAN DATOS POST
 if (isset($_POST)) {
@@ -114,6 +114,6 @@ if (isset($_POST)) {
         
     }
    
- header("Location:../Archivos/registrar.php");
+ header("Location:registrar.php");
 //    
 }

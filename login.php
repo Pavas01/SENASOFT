@@ -1,6 +1,6 @@
 <?php
 // Iniciar la sesión y la conexión a bd
-require_once '../Includes/conexion.php';
+require_once 'Includes/conexion.php';
 
 // Recoger datos del formulario
 if(isset($_POST)){
@@ -31,7 +31,6 @@ if(isset($_POST)){
 		if($verify){
 			// Utilizar una sesión para guardar los datos del usuario logueado
 			$_SESSION['usuario'] = $usuario;
-			
 		}else{
 			// Si algo falla enviar una sesión con el fallo
 			$_SESSION['error_login'] = "Login incorrecto!!";
@@ -47,22 +46,23 @@ echo $rol;
  //redireccion de acuerdo al rol administrador
  if ($rol =='5' && $verify == true) {
         $_SESSION['invitado'] = "<div class='m-auto bg-warning text-center'>Aun no cuentas con los permisos de acceso</div>";
- 	header("Location:../index.php");
+ 	header("Location:index.php");
  }elseif ($rol =='4' && $verify == true) {
      	$_SESSION['rolUsuario']='Cliente';
- 	header("Location:../Login/Cliente/");
+ 	header("Location:Cliente/");
  }
  elseif($rol =='3' && $verify == true) {
  	$_SESSION['tUsuario']='Proveedor';
- 	header("Location:../Login/Proveedor/");
+ 	header("Location:Proveedor/");
  }elseif ($rol =='2' && $verify == true) {
  	$_SESSION['tUsuario']='Vendedor';
- 	header("Location:../Login/Vendedor/");
+ 	header("Location:Vendedor/");
  }elseif ($rol =='1' && $verify == true) {
- 	header("Location:../Login/Administrador/");
+ 	header("Location:Administrador/");
  	$_SESSION['rolUsuario']='Administrador';
  }
  else{
+    $_SESSION['error_ingreso']="<div class='m-auto bg-danger text-center'>Datos Incorrectos</div>";
  	header("Location:index.php");
  }
 

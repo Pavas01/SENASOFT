@@ -55,7 +55,8 @@
                     <div class="p-2"><a href="" class="btn btn-success">Empresas</a></div>
                     <div class="p-2"><a href="" class="btn btn-success">Bodegas</a></div>
                     <div class="p-2"><a href="../Contenido/form_productos.php" class="btn btn-success">Productos</a></div>
-                    <div class="p-2"><a href="" class="btn btn-success">Usuarios</a></div>   
+                    <div class="p-2"><a href="" class="btn btn-success">Usuarios</a></div>
+                    <div class="p-2"><a href="" class="btn btn-success">Descuentos</a></div>   
                 </div>
             </div>
         </div>

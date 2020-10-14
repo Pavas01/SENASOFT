@@ -25,12 +25,16 @@
             echo $_SESSION['invitado'];
             session_destroy();
         }
+        if(isset($_SESSION['error_ingreso'])){
+            echo $_SESSION['error_ingreso'];
+            session_destroy();
+        }
         ?>
     </strong><hr>
     <center class="border rounded">
         <div class="container p-4" align="center">
 
-            <form action="php/login.php" class="inicio_sesion w-50" autocomplete="off" method="POST">
+            <form action="login.php" class="inicio_sesion w-50" autocomplete="off" method="POST">
                 <div class="form-group" style="padding-right: 4px; ">
                     <div class="input-group user">
                         <label for="Correo" class="sr-only">Usuario</label>
@@ -51,7 +55,7 @@
                     <div class="p-4">
                             <button type="submit" class="btn btn-success enviar m-auto">Aceptar</button>
                     </div>
-                     <a href="Archivos/registrar.php">¿No tienes cuenta? Registrarse</a>
+                     <a href="registrar.php">¿No tienes cuenta? Registrarse</a>
                 </div>
             </form>
 

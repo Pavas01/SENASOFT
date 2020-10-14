@@ -1,3 +1,4 @@
+<?php require_once '../Includes/redireccion.php';?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,53 +9,25 @@
         <script src="https://kit.fontawesome.com/9ee254a0d0.js" crossorigin="anonymous"></script>
         <script type="text/javascript" src="http://code.jquery.com/jquery.js"></script>
         
-        <link rel="stylesheet" href="../../../Css/estilos.css">
-        
-        <style>
-		
-       
-	</style>
+        <link rel="stylesheet" href="../Css/estilos.css">
         
 </head>
 <body>
     
     <nav class="navbar navbar-expand-lg navbar-light bg-dark shadow-lg">
       <a class="navbar-brand text-light" href="index.php">SENASOFT</a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-  <div class="collapse navbar-collapse" id="navbarText">
-    <ul class="navbar-nav mr-auto">
-		  
-          <li class="nav-item active">
-            <a class="nav-link text-light" href="">NOMBRE<span class="sr-only">(current)</span></a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link text-light" href="">NOMBRE</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link text-light" href=""></a>
-          </li>
-    </ul>
-    
-    <div class="nav-item text-light"  style="margin-right:4em;">
-		    <ul class="nav nav-pills">
+      		    <ul class="nav nav-pills">
      <li class="nav-item dropdown ">
          <a class="nav-link dropdown-toggle text-light cuenta" data-toggle="dropdown" href="#"><img src="https://image.freepik.com/vector-gratis/perfil-avatar-hombre-icono-redondo_24640-14044.jpg" 
          class="rounded-circle img-fluid" width="30px" heigth="30px"></a>
      <div class="dropdown-menu bg-dark">
-         <a class="dropdown-item bg-dark text-light" href="#">Ver Perfil</a>
-         <a class="dropdown-item bg-dark text-light" href="#">Cerrar Sesion</a>
+        <a class="dropdown-item bg-dark text-light" href=""><?php 
+            
+            echo $_SESSION['usuario'] ['nombres'] ." ". $_SESSION['usuario']['apellidos'];?></a>
+         <a class="dropdown-item bg-dark text-light" href="../Includes/cerrar_sesion.php">Cerrar Sesion</a>
      </div>
      </li>
      </ul>
-	</div>
-  </div>
 </nav>
-
-
-
-
-    <div>
     
   </div>

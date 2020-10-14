@@ -1,6 +1,6 @@
 <?php
-require_once '../includes/conexion.php';
-require_once '../includes/helpers.php';
+require_once 'includes/conexion.php';
+require_once 'includes/helpers.php';
 ?>
 
 
@@ -13,14 +13,14 @@ require_once '../includes/helpers.php';
             <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
             <script src="https://kit.fontawesome.com/9ee254a0d0.js" crossorigin="anonymous"></script>
             <script type="text/javascript" src="http://code.jquery.com/jquery.js"></script>
-            <link rel="stylesheet" href="../Css/estilos.css">     
+            <link rel="stylesheet" href="Css/estilos.css">     
 </head>
 <body>
 <center class="p-5">
 <div class="container">
    <strong><h4>REGISTRO PERSONA</h4></strong>
    
-   <form action="../php/registroUsuarios.php" method="POST" autocomplete="off">
+   <form action="registroUsuarios.php" method="POST" autocomplete="off">
        <!--mostrar errores registro-->
                     <?php if(isset($_SESSION['completado'])): ?>
                     <div class="alerta alerta-exito text-light bg-success w-50 rounded ">
@@ -104,7 +104,7 @@ require_once '../includes/helpers.php';
             <button type="submit" value="Aceptar" class="btn btn-success m-auto">Aceptar</button>
         </div>
         <div class="row p-2 m-auto" align="center">
-            <a href="../index.php" class="m-auto">¿Ya tienes una cuenta? Iniciar sesion</a>
+            <a href="index.php" class="m-auto">¿Ya tienes una cuenta? Iniciar sesion</a>
         </div>
     </form>
    <?php borrarErrores();  ?>
