@@ -3,7 +3,6 @@ require_once 'includes/conexion.php';
 require_once 'includes/helpers.php';
 ?>
 
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
