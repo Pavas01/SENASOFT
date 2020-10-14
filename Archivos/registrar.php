@@ -20,6 +20,7 @@
             <div class="col-25">
             </div>
             <div class="col-75">
+                <?php echo isset($_SESSION['errores']) ? mostrarError($_SESSION['errores'], 'nombre') : '' ; ?>
                 <input type="text" id="" name="nombres" placeholder="Nombres">
             </div>
         </div>
