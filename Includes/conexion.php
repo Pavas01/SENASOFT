@@ -8,8 +8,13 @@ $db = "senasoft";
 $conexion = new mysqli($servername, $username, $password, $db);
 
 // Check connection
-if ($conexion->connect_error) {
-    die("Connection failed: " . $conexion->connect_error);
+
+
+
+// Iniciar la sesión
+if(!isset($_SESSION)){
+	session_start();
 }
-echo "Connected successfully";
+//codificacion de base de datos
+mysqli_query($conexion, "SET NAMES 'utf8'");
  ?>
