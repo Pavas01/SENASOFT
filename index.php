@@ -9,30 +9,22 @@
         <script type="text/javascript" src="http://code.jquery.com/jquery.js"></script>
         
         <style>
-        .enviar{
-        border-top-right-radius: 6px;
-        border-bottom-right-radius: 6px;
-        border-top-left-radius:0px; 
-        border-bottom-left-radius:0px; 
-        /*background:#C8C0BE;*/
-        }
             
         .centrar{
-            transform: translate(0%, 70%);
+            transform: translate(0%, 30%);
         }
         </style>
         
 </head>
 <body> 
-       
 <div class="container p-4 centrar">
     <strong >
-        <h4 class="text-center">INICIAR SESION:</h4>
+        <h4 class="text-center">INICIAR SESION</h4>
     </strong><hr>
     <center class="border rounded">
         <div class="container p-4" align="center">
 
-            <form action="Controlador/login.php" class="inicio_sesion w-50" autocomplete="off" method="POST">
+            <form action="Includes/login.php" class="inicio_sesion w-50" autocomplete="off" method="POST">
                 <div class="form-group" style="padding-right: 4px; ">
                     <div class="input-group user">
                         <label for="Correo" class="sr-only">Usuario</label>
@@ -45,16 +37,17 @@
                 <div class="form-group">
                     <div class="input-group">
                         <label for="Correo" class="sr-only">Password</label>
-                        <span class="input-group-addon bg-success text-light rounded-left p-1 addon">
+                        <span class=" bg-success text-light rounded-left p-1 addon">
                             <i class="fas fa-key p-1"></i>
                         </span>
                         <input type="password" class="form-control" name="pass" id="" required>
-                        <span class="input-group-btn">
-                            <button type="submit" class="btn btn-success enviar">Aceptar</button>
-                        </span>
                     </div>
-                    <a href="Archivos/registrar.php">Registrarse</a>
+                    <div class="p-4">
+                            <button type="submit" class="btn btn-success enviar m-auto">Aceptar</button>
+                    </div>
+                     <a href="Archivos/registrar.php">¿No tienes cuenta? Registrarse</a>
                 </div>
+               
             </form>
 
         </div>

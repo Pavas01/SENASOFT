@@ -2,22 +2,20 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Document</title>
-        <!--LIBRERIAS BOOTSTRAP-->
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
-        <script src="https://kit.fontawesome.com/9ee254a0d0.js" crossorigin="anonymous"></script>
-        <script type="text/javascript" src="http://code.jquery.com/jquery.js"></script>
-        
-        <link rel="stylesheet" href="../Css/estilos.css">
-        
+            <title>Document</title>
+            <!--LIBRERIAS BOOTSTRAP-->
+            <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+            <script src="https://kit.fontawesome.com/9ee254a0d0.js" crossorigin="anonymous"></script>
+            <script type="text/javascript" src="http://code.jquery.com/jquery.js"></script>
+            <link rel="stylesheet" href="../Css/estilos.css">     
 </head>
 <body>
 <center class="p-5">
 <div class="container">
    <strong><h4>REGISTRO PERSONA</h4></strong>
-    <form action="../Controlador/registroUsuarios.php" method="POST" autocomplete="off">
+    <form action="../Includes/registroUsuarios.php" method="POST" autocomplete="off">
         <div class="row">
-            <div class="col-25">
+           <div class="col-25">
             </div>
             <div class="col-75">
                 <input type="text" id="" name="nombres" placeholder="Nombres">
@@ -43,35 +41,35 @@
             </div>
         </div>
         <div class="row">
-            <div class="col-25">
+           <div class="col-25">
             </div>
             <div class="col-75">
                 <input type="number" id="" name="documento" placeholder="Numero Documento">
             </div>
         </div>
         <div class="row">
-            <div class="col-25">
+           <div class="col-25">
             </div>
             <div class="col-75">
                 <input type="number" id="" name="telefono" placeholder="Telefono">
             </div>
         </div>
         <div class="row">
-            <div class="col-25">
+           <div class="col-25">
             </div>
             <div class="col-75">
                 <input type="email" id="" name="email" placeholder="E-MAIL">
             </div>
         </div>
          <div class="row">
-            <div class="col-25">
+           <div class="col-25">
             </div>
             <div class="col-75">
                 <input type="text" id="" name="usuario" placeholder="Usuario">
             </div>
         </div>
         <div class="row">
-            <div class="col-25">
+           <div class="col-25">
             </div>
             <div class="col-75">
                 <input type="password" id="" name="password" placeholder="Contraseña">
