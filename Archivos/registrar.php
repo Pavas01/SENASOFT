@@ -38,7 +38,7 @@
                     <option value="">Seleccione</option>
                     <option value="Tarjeta de Identidad">Tarjeta de Identidad</option>
                     <option value="Cedula de Ciudadania">Cedula de Ciudadania</option>
-                    <option value="Cedula extranjera">Cedula extranjera</option>
+                    <option value="Cedula extranjera">Cedula extranjeria</option>
                 </select>
             </div>
         </div>
