@@ -32,7 +32,7 @@
     <center class="border rounded">
         <div class="container p-4" align="center">
 
-            <form action="index.php" class="inicio_sesion w-50" autocomplete="off" method="POST">
+            <form action="Controlador/login.php" class="inicio_sesion w-50" autocomplete="off" method="POST">
                 <div class="form-group" style="padding-right: 4px; ">
                     <div class="input-group user">
                         <label for="Correo" class="sr-only">Usuario</label>
