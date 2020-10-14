@@ -1,3 +1,3 @@
 <?php require_once 'herencias/header.php'; ?>
-<center class="p-4"></center>
+<div>Hola Cliente</div>
 <?php require_once 'herencias/footer.php'; ?>

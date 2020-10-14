@@ -3,10 +3,6 @@
     padding: 0;
 }
 
-form{
-    
-}
-
 input[type=text],input[type=number], select, textarea{
 width: 70%;
 padding: 12px;
@@ -80,6 +76,19 @@ clear: both;
        margin-left:4em;
     }
 }
+
+.enviar{
+border-top-right-radius: 6px;
+border-bottom-right-radius: 6px;
+border-top-left-radius:0px;
+border-bottom-left-radius:0px;
+                        /*background:#C8C0BE;*/
 }
-    
+.btn:focus{
+outline:none !important;
+outline-width: 0 !important;
+box-shadow: none;
+-moz-box-shadow: none;
+-webkit-box-shadow: none;
+}
   
