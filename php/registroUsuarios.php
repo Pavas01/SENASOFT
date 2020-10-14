@@ -96,10 +96,10 @@ if (isset($_POST)) {
     if (count($errores) == 0){
         $guardarUsuario = true;
 //        cifrar contraseña
-      $contraseña_segura = password_hash($password, PASSWORD_BCRYPT,['cost'=>4]);
+      $password_segura = password_hash($password, PASSWORD_BCRYPT,['cost'=>4]);
 //        
 // insertar en la base de datos
-       $sql = "INSERT INTO usuarios VALUES(NULL, '$nombres' , '$apellidos' , '$tipo_documento', '$documento', '$rol', '$telefono', '$email', '$usuario' ,'$contraseña_segura');";
+       $sql = "INSERT INTO usuarios VALUES(NULL, '$nombres' , '$apellidos' , '$tipo_documento', '$documento', '$rol', '$telefono', '$email', '$usuario' ,'$password_segura');";
      $guardar = mysqli_query($conexion, $sql);
      
     

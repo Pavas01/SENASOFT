@@ -103,6 +103,9 @@ require_once '../includes/helpers.php';
         <div class="row p-2" align="center">
             <button type="submit" value="Aceptar" class="btn btn-success m-auto">Aceptar</button>
         </div>
+        <div class="row p-2 m-auto" align="center">
+            <a href="../index.php" class="m-auto">¿Ya tienes una cuenta? Iniciar sesion</a>
+        </div>
     </form>
    <?php borrarErrores();  ?>
 </div>
