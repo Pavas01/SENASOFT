@@ -10,6 +10,11 @@
         
         <link rel="stylesheet" href="../../../Css/estilos.css">
         
+        <style>
+		
+       
+	</style>
+        
 </head>
 <body>
     
@@ -22,7 +27,7 @@
     <ul class="navbar-nav mr-auto">
 		  
           <li class="nav-item active">
-            <a class="nav-link text-light" href="herencias/registros.php">Registros<span class="sr-only">(current)</span></a>
+            <a class="nav-link text-light" href="">NOMBRE<span class="sr-only">(current)</span></a>
           </li>
           <li class="nav-item">
             <a class="nav-link text-light" href="">NOMBRE</a>

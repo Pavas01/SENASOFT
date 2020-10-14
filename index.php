@@ -19,6 +19,13 @@
 <div class="container p-4 centrar">
     <strong >
         <h4 class="text-center">INICIAR SESION</h4>
+        <?php 
+        session_start();
+        if (isset($_SESSION['invitado'])) {
+            echo $_SESSION['invitado'];
+            session_destroy();
+        }
+        ?>
     </strong><hr>
     <center class="border rounded">
         <div class="container p-4" align="center">
