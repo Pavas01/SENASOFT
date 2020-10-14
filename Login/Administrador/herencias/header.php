@@ -32,7 +32,7 @@
 <body>
     
     <nav class="navbar navbar-expand-lg navbar-light bg-dark shadow-lg">
-      <a class="navbar-brand text-light" href="">TITULO</a>
+      <a class="navbar-brand text-light" href="index.php">SENASOFT</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
@@ -46,12 +46,28 @@
             <a class="nav-link text-light" href="">NOMBRE</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link text-light" href="includes/registrar.php">Registrar</a>
+            <a class="nav-link text-light" href=""></a>
           </li>
-          
     </ul>
-    <div class="nav-item text-light" style="margin-left: -16px;">
-		    <a href="" class="text-light nav-link">Sesion</a>
+    
+    <div class="nav-item text-light"  style="margin-right:4em;">
+		    <ul class="nav nav-pills">
+     <li class="nav-item dropdown ">
+         <a class="nav-link dropdown-toggle text-light cuenta" data-toggle="dropdown" href="#"><img src="https://image.freepik.com/vector-gratis/perfil-avatar-hombre-icono-redondo_24640-14044.jpg" 
+         class="rounded-circle img-fluid" width="30px" heigth="30px"></a>
+     <div class="dropdown-menu bg-dark">
+         <a class="dropdown-item bg-dark text-light" href="#">Ver Perfil</a>
+         <a class="dropdown-item bg-dark text-light" href="#">Cerrar Sesion</a>
+     </div>
+     </li>
+     </ul>
 	</div>
   </div>
 </nav>
+
+
+
+
+    <div>
+    
+  </div>

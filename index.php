@@ -14,7 +14,6 @@
             transform: translate(0%, 30%);
         }
         </style>
-        
 </head>
 <body> 
 <div class="container p-4 centrar">

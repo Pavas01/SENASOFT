@@ -36,7 +36,7 @@ session_start();
             </div>
             <div class="col-75">
                 <?php echo isset($_SESSION['errores']) ? mostrarError($_SESSION['errores'], 'apellidos') : '' ; ?>
-                <input type="text" id="" name="apellidos" placeholder="Apellidos">
+                <input type="text" id="" name="apellidos" placeholder="Apellidos" >
             </div>
         </div>
         <div class="row">
@@ -44,7 +44,7 @@ session_start();
             </div>
             <div class="col-75">
                 <?php echo isset($_SESSION['errores']) ? mostrarError($_SESSION['errores'], 'tipoDocumento') : '' ; ?>
-                <select id="" name="tipo_documento">
+                <select id="" name="tipo_documento" >
                     <option value="">Seleccione</option>
                     <option value="Tarjeta de Identidad">Tarjeta de Identidad</option>
                     <option value="Cedula de Ciudadania">Cedula de Ciudadania</option>
