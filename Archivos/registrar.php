@@ -15,7 +15,7 @@
 <center class="p-5">
 <div class="container">
    <strong><h4>REGISTRO PERSONA</h4></strong>
-    <form action="">
+   <form action="../Controlador/registroUsuarios.php" method="POST">
         <div class="row">
             <div class="col-25">
             </div>
