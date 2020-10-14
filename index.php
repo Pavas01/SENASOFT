@@ -53,6 +53,7 @@
                             <button type="submit" class="btn btn-success enviar">Aceptar</button>
                         </span>
                     </div>
+                    <a href="Archivos/registrar.php">Registrarse</a>
                 </div>
             </form>
 
