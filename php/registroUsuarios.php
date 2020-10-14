@@ -13,6 +13,7 @@ if (isset($_POST)) {
     $email = $_POST['email'];
     $usuario = $_POST['usuario'];
     $password = $_POST['password'];
+    $rol = '5';
 
     //array para errores
     $errores = array();
@@ -93,18 +94,19 @@ if (isset($_POST)) {
     
   
     if (count($errores) == 0){
-//        $guardarUsuario = true;
-//        //cifrar contraseña
-//        $contraseña_segura = password_hash($password, PASSWORD_BCRYPT,['cost'=>4]);
+        $guardarUsuario = true;
+//        cifrar contraseña
+      $contraseña_segura = password_hash($password, PASSWORD_BCRYPT,['cost'=>4]);
 //        
-//        //insertar en la base de datos
-//        $sql = "INSERT INTO usuarios VALUES(null, '$nombres' , '$apellidos' , '$email' ,'$contraseña_segura' ,curdate());";
-//        $guardar = mysqli_query($db, $sql);
-        
+// insertar en la base de datos
+       $sql = "INSERT INTO usuarios VALUES(NULL, '$nombres' , '$apellidos' , '$tipo_documento', '$documento', '$rol', '$telefono', '$email', '$usuario' ,'$contraseña_segura');";
+     $guardar = mysqli_query($conexion, $sql);
+     
+    
         if($guardar){
-            $_SESSION['completado'] = "el registro se ha completado con exito";
+            $_SESSION['completado'] = "<i class='fas fa-check-circle'></i> El registro se ha completado con exito";
         }else{
-           $_SESSION['errores'] ['general'] = "fallo al guardar el registro";
+           $_SESSION['errores'] ['general'] = "<i class='fas fa-exclamation-triangle'></i> Falló al guardar el registro";
         }
             
     } else {

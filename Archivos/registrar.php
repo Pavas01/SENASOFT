@@ -1,8 +1,6 @@
 <?php
-//require_once '../includes/conexion.php';
+require_once '../includes/conexion.php';
 require_once '../includes/helpers.php';
-
-session_start();
 ?>
 
 
@@ -21,7 +19,17 @@ session_start();
 <center class="p-5">
 <div class="container">
    <strong><h4>REGISTRO PERSONA</h4></strong>
+   
    <form action="../php/registroUsuarios.php" method="POST" autocomplete="off">
+       <!--mostrar errores registro-->
+                    <?php if(isset($_SESSION['completado'])): ?>
+                    <div class="alerta alerta-exito text-light bg-success w-50 rounded ">
+                        <h5 class="text-light m-auto"><?=$_SESSION['completado']?></h5>
+                    </div>
+                    <?php elseif(isset($_SESSION['errores']['general'])): ?>
+                    <div class="alerta alerta-exito">
+                        <?=$_SESSION['errores']['general']?>
+                    <?php endif; ?>
         <div class="row">
            <div class="col-25">
             </div>
