@@ -7,7 +7,7 @@
 
 
 <div class="navbar">
-<ul class="nav nav-pills">
+<ul class="nav nav-pills p-1">
     <li class="nav-item dropdown">
         <a class="nav-link  text-dark bg-dark p-1" data-toggle="dropdown" href="#"><h2 class="text-light">
         <i class="fas fa-cog"></i> AGREGAR</h2></a>
@@ -16,11 +16,12 @@
         <a class="dropdown-item bg-dark text-light m-auto" href="agregar_empresas.php"><i class="fas fa-hotel"></i> EMPRESAS</a>
         <a class="dropdown-item bg-dark text-light m-auto" href="agregar_bodegas.php"><i class="fas fa-home"></i> BODEGAS</a>
         <a class="dropdown-item bg-dark text-light m-auto" href="#"><i class="fas fa-users"></i> CLIENTES</a>
+        <a class="dropdown-item bg-dark text-light m-auto" href="agregar_rol.php"><i class="fas fa-user-edit"></i> ROLES</a>
     </div>
     </li>
 </ul>
 
-<ul class="nav nav-pills">
+<ul class="nav nav-pills p-1">
     <li class="nav-item dropdown">
         <a class="nav-link  text-dark bg-dark p-1" data-toggle="dropdown" href="#"><h2 class="text-light">
         <i class="fas fa-user-circle"></i> CUENTA</h2></a>

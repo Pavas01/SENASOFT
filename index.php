@@ -18,7 +18,7 @@
 <body> 
 <div class="container centrar">
     <strong >
-        <div class="text-center logo"><img src="Img/senasoft.png" width="200px" height="80px"></div>
+        <div class="text-center logo"><img src="Img/senasoft.png" width="200px" height="80px"></div><br>
         <?php 
         session_start();
         if (isset($_SESSION['invitado'])) {

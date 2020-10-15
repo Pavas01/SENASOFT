@@ -7,7 +7,7 @@ require_once 'includes/helpers.php';
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-            <title>Document</title>
+            <title>Registro</title>
             <!--LIBRERIAS BOOTSTRAP-->
             <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
             <script src="https://kit.fontawesome.com/9ee254a0d0.js" crossorigin="anonymous"></script>
@@ -19,87 +19,55 @@ require_once 'includes/helpers.php';
 <div class="container">
    <strong><h4>REGISTRO PERSONA</h4></strong>
    
-   <form action="registroUsuarios.php" method="POST" autocomplete="off">
+   <form action="registroUsuarios.php" method="POST" autocomplete="off" class="p-2">
        <!--mostrar errores registro-->
                     <?php if(isset($_SESSION['completado'])): ?>
                     <div class="alerta alerta-exito text-light bg-success w-50 rounded ">
                         <h5 class="text-light m-auto"><?=$_SESSION['completado']?></h5>
-                    </div>
+                    </div><br>
                     <?php elseif(isset($_SESSION['errores']['general'])): ?>
                     <div class="alerta alerta-exito">
                         <?=$_SESSION['errores']['general']?>
                     <?php endif; ?>
-        <div class="row">
-           <div class="col-25">
-            </div>
-            <div class="col-75">
-                
+                   </div><br>
+        <div class="form-group">
                 <?php echo isset($_SESSION['errores']) ? mostrarError($_SESSION['errores'], 'nombre') : '' ; ?>
-                <input type="text" id="" name="nombres" placeholder="Nombres">
+                <input type="text" id="" name="nombres" placeholder="Nombres" class="form-control">
             </div>
-        </div>
-        <div class="row">
-            <div class="col-25">
-            </div>
-            <div class="col-75">
+        <div class="form-group">
                 <?php echo isset($_SESSION['errores']) ? mostrarError($_SESSION['errores'], 'apellidos') : '' ; ?>
-                <input type="text" id="" name="apellidos" placeholder="Apellidos" >
-            </div>
+                <input type="text" id="" name="apellidos" placeholder="Apellidos" class="form-control" >
         </div>
-        <div class="row">
-            <div class="col-25">
-            </div>
-            <div class="col-75">
+        <div class="form-group">
                 <?php echo isset($_SESSION['errores']) ? mostrarError($_SESSION['errores'], 'tipoDocumento') : '' ; ?>
-                <select id="" name="tipo_documento" >
+                <select id="" name="tipo_documento" class="form-control" >
                     <option value="">Seleccione</option>
                     <option value="Tarjeta de Identidad">Tarjeta de Identidad</option>
                     <option value="Cedula de Ciudadania">Cedula de Ciudadania</option>
                     <option value="Cedula extranjera">Cedula extranjeria</option>
                 </select>
-            </div>
         </div>
-        <div class="row">
-           <div class="col-25">
-            </div>
-            <div class="col-75">
+        <div class="form-group">
                 <?php echo isset($_SESSION['errores']) ? mostrarError($_SESSION['errores'], 'documento') : '' ; ?>
-                <input type="number" id="" name="documento" placeholder="Numero Documento">
-            </div>
+                <input type="number" id="" name="documento" placeholder="Numero Documento" class="form-control">
         </div>
-        <div class="row">
-           <div class="col-25">
-            </div>
-            <div class="col-75">
+        <div class="form-group">
                 <?php echo isset($_SESSION['errores']) ? mostrarError($_SESSION['errores'], 'telefono') : '' ; ?>
-                <input type="number" id="" name="telefono" placeholder="Telefono">
-            </div>
+                <input type="tel" id="" name="telefono" placeholder="Telefono" class="form-control">
         </div>
-        <div class="row">
-           <div class="col-25">
-            </div>
-            <div class="col-75">
+        <div class="form-group">
                 <?php echo isset($_SESSION['errores']) ? mostrarError($_SESSION['errores'], 'email') : '' ; ?>
-                <input type="email" id="" name="email" placeholder="E-MAIL">
-            </div>
+                <input type="email" id="" name="email" placeholder="E-MAIL" class="form-control">
         </div>
-         <div class="row">
-           <div class="col-25">
-            </div>
-            <div class="col-75">
+         <div class="form-group">
                 <?php echo isset($_SESSION['errores']) ? mostrarError($_SESSION['errores'], 'usuario') : '' ; ?>
-                <input type="text" id="" name="usuario" placeholder="Usuario">
-            </div>
+                <input type="text" id="" name="usuario" placeholder="Usuario" class="form-control">
         </div>
-        <div class="row">
-           <div class="col-25">
-            </div>
-            <div class="col-75">
+        <div class="form-group">
                 <?php echo isset($_SESSION['errores']) ? mostrarError($_SESSION['errores'], 'password') : '' ; ?>
-                <input type="password" id="" name="password" placeholder="Contraseña">
-            </div>
+                <input type="password" id="" name="password" placeholder="Contraseña" class="form-control">
         </div>
-        <div class="row p-2" align="center">
+        <div class="form-group p-2" align="center">
             <button type="submit" value="Aceptar" class="btn btn-success m-auto">Aceptar</button>
         </div>
         <div class="row p-2 m-auto" align="center">

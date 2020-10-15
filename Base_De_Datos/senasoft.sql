@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 14-10-2020 a las 17:55:26
+-- Tiempo de generación: 15-10-2020 a las 06:02:37
 -- Versión del servidor: 10.4.11-MariaDB
 -- Versión de PHP: 7.4.2
 
@@ -30,10 +30,11 @@ SET time_zone = "+00:00";
 
 CREATE TABLE `bodega` (
   `id` int(11) NOT NULL,
-  `nombre` int(11) NOT NULL,
+  `nombre` varchar(40) NOT NULL,
   `direccion` varchar(100) NOT NULL,
   `id_municipio` int(11) NOT NULL,
-  `id_empresa` int(11) NOT NULL
+  `telefono` varchar(13) NOT NULL,
+  `id_sucursal` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
@@ -78,7 +79,6 @@ INSERT INTO `departamento` (`id`, `departamento`) VALUES
 CREATE TABLE `empresa` (
   `id` int(11) NOT NULL,
   `empresa` varchar(70) NOT NULL,
-  `id_municipio` int(11) NOT NULL,
   `telefono` varchar(15) NOT NULL,
   `correo` varchar(100) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
@@ -87,8 +87,10 @@ CREATE TABLE `empresa` (
 -- Volcado de datos para la tabla `empresa`
 --
 
-INSERT INTO `empresa` (`id`, `empresa`, `id_municipio`, `telefono`, `correo`) VALUES
-(1, 'Superoriente SA', 1, '543663', 'superorient23@hotmail.com');
+INSERT INTO `empresa` (`id`, `empresa`, `telefono`, `correo`) VALUES
+(1, 'Superoriente SA', '543663', 'superorient23@hotmail.com'),
+(2, 'amazon', '4227300', 'pedro@gmail.com'),
+(3, 'amazon', '4227300', 'juan@gmail');
 
 -- --------------------------------------------------------
 
@@ -147,7 +149,8 @@ CREATE TABLE `productos` (
   `descripcion` text NOT NULL,
   `precio_unidad` int(11) NOT NULL,
   `peso` varchar(20) NOT NULL,
-  `id_bodega` int(11) NOT NULL
+  `id_bodega` int(11) NOT NULL,
+  `img` varchar(100) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
@@ -175,6 +178,20 @@ INSERT INTO `rol` (`id_rol`, `rol`) VALUES
 -- --------------------------------------------------------
 
 --
+-- Estructura de tabla para la tabla `sucursal`
+--
+
+CREATE TABLE `sucursal` (
+  `id` int(11) NOT NULL,
+  `nombre` varchar(100) NOT NULL,
+  `id_empresa` int(11) NOT NULL,
+  `telefono` varchar(15) NOT NULL,
+  `id_municipio` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+-- --------------------------------------------------------
+
+--
 -- Estructura de tabla para la tabla `usuarios`
 --
 
@@ -184,7 +201,7 @@ CREATE TABLE `usuarios` (
   `apellidos` varchar(100) NOT NULL,
   `tipo_documento` varchar(100) NOT NULL,
   `documento` int(11) NOT NULL,
-  `id_rol` int(4) NOT NULL,
+  `id_rol` int(11) NOT NULL,
   `telefono` varchar(15) NOT NULL,
   `email` varchar(100) NOT NULL,
   `usuario` varchar(50) NOT NULL,
@@ -200,13 +217,14 @@ CREATE TABLE `usuarios` (
 --
 ALTER TABLE `bodega`
   ADD PRIMARY KEY (`id`),
-  ADD KEY `id_empresa` (`id_empresa`),
-  ADD KEY `id_municipio` (`id_municipio`);
+  ADD KEY `id_municipio` (`id_municipio`),
+  ADD KEY `id_sucursal` (`id_sucursal`);
 
 --
 -- Indices de la tabla `compra`
 --
 ALTER TABLE `compra`
+  ADD PRIMARY KEY (`id`),
   ADD KEY `id_proveedor` (`id_proveedor`);
 
 --
@@ -219,8 +237,7 @@ ALTER TABLE `departamento`
 -- Indices de la tabla `empresa`
 --
 ALTER TABLE `empresa`
-  ADD PRIMARY KEY (`id`),
-  ADD KEY `id_municipio` (`id_municipio`);
+  ADD PRIMARY KEY (`id`);
 
 --
 -- Indices de la tabla `factura`
@@ -253,6 +270,14 @@ ALTER TABLE `rol`
   ADD PRIMARY KEY (`id_rol`);
 
 --
+-- Indices de la tabla `sucursal`
+--
+ALTER TABLE `sucursal`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `id_empresa` (`id_empresa`),
+  ADD KEY `id_municipio` (`id_municipio`);
+
+--
 -- Indices de la tabla `usuarios`
 --
 ALTER TABLE `usuarios`
@@ -267,6 +292,12 @@ ALTER TABLE `usuarios`
 -- AUTO_INCREMENT de la tabla `bodega`
 --
 ALTER TABLE `bodega`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=833;
+
+--
+-- AUTO_INCREMENT de la tabla `compra`
+--
+ALTER TABLE `compra`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
@@ -279,19 +310,25 @@ ALTER TABLE `factura`
 -- AUTO_INCREMENT de la tabla `productos`
 --
 ALTER TABLE `productos`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1238;
 
 --
 -- AUTO_INCREMENT de la tabla `rol`
 --
 ALTER TABLE `rol`
-  MODIFY `id_rol` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `id_rol` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+
+--
+-- AUTO_INCREMENT de la tabla `sucursal`
+--
+ALTER TABLE `sucursal`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT de la tabla `usuarios`
 --
 ALTER TABLE `usuarios`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- Restricciones para tablas volcadas
@@ -301,20 +338,14 @@ ALTER TABLE `usuarios`
 -- Filtros para la tabla `bodega`
 --
 ALTER TABLE `bodega`
-  ADD CONSTRAINT `bodega_ibfk_1` FOREIGN KEY (`id_empresa`) REFERENCES `empresa` (`id`),
-  ADD CONSTRAINT `bodega_ibfk_2` FOREIGN KEY (`id_municipio`) REFERENCES `municipio` (`id`);
+  ADD CONSTRAINT `bodega_ibfk_2` FOREIGN KEY (`id_municipio`) REFERENCES `municipio` (`id`),
+  ADD CONSTRAINT `bodega_ibfk_3` FOREIGN KEY (`id_sucursal`) REFERENCES `sucursal` (`id`);
 
 --
 -- Filtros para la tabla `compra`
 --
 ALTER TABLE `compra`
   ADD CONSTRAINT `compra_ibfk_1` FOREIGN KEY (`id_proveedor`) REFERENCES `usuarios` (`id`);
-
---
--- Filtros para la tabla `empresa`
---
-ALTER TABLE `empresa`
-  ADD CONSTRAINT `empresa_ibfk_1` FOREIGN KEY (`id_municipio`) REFERENCES `municipio` (`id`);
 
 --
 -- Filtros para la tabla `factura`
@@ -336,6 +367,13 @@ ALTER TABLE `municipio`
 --
 ALTER TABLE `productos`
   ADD CONSTRAINT `productos_ibfk_1` FOREIGN KEY (`id_bodega`) REFERENCES `bodega` (`id`);
+
+--
+-- Filtros para la tabla `sucursal`
+--
+ALTER TABLE `sucursal`
+  ADD CONSTRAINT `sucursal_ibfk_2` FOREIGN KEY (`id_municipio`) REFERENCES `municipio` (`id`),
+  ADD CONSTRAINT `sucursal_ibfk_3` FOREIGN KEY (`id_empresa`) REFERENCES `empresa` (`id`);
 
 --
 -- Filtros para la tabla `usuarios`
