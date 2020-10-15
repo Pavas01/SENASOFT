@@ -53,7 +53,7 @@
                         <input type="password" class="form-control" name="pass" id="" required>
                     </div>
                     <div class="p-4">
-                            <button type="submit" class="btn btn-success enviar m-auto">Aceptar</button>
+                            <button type="submit" class="btn btn-success m-auto">Aceptar</button>
                     </div>
                      <a href="registrar.php">¿No tienes cuenta? Registrarse</a>
                 </div>
