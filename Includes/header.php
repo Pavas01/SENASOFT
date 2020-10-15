@@ -10,12 +10,11 @@
         <script src="https://kit.fontawesome.com/9ee254a0d0.js" crossorigin="anonymous"></script>
         <script type="text/javascript" src="http://code.jquery.com/jquery.js"></script>
         
-        
 </head>
 <body>
     
 <nav class="navbar navbar-expand-lg navbar-light bg-dark shadow-lg">
-      <a class="navbar-brand text-light" href="index.php"><h2><i class="fas fa-sync-alt"></i> SENASOFT</h2></a>
+      <a class="navbar-brand text-light" href="index.php"><h2><i class="fas fa-sync-alt"></i>SENASOFT</h2></a>
 </nav>
     
   </div>

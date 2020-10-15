@@ -5,9 +5,6 @@
     body{
         overflow-x: hidden;
     }
-    input,textarea{
-        text-align: center;
-    }
     
     #texto{
         text-align: center;
@@ -54,9 +51,8 @@
         $bodegas=mysqli_query($conexion,$bodegass);
 ?>
 
-
 <div class="row">
-   <div class="col-sm-12 col-md-12 col-lg-3 p-2 m-auto">
+   <div class="col-sm-12 col-md-12 col-lg-3 m-auto">
        <div class="p-3">
          <div class="card p-2">
                      <?php  if($edit == false){?>
@@ -66,22 +62,22 @@
                        <?php } ?>
            <form action="recibe_producto.php" method="POST" enctype='multipart/form-data'>
               <div class="form-group">
-                   <input type="hidden" name="id" class="form-control m-auto w-75" placeholder="Nombre" value="<?php echo $id; ?>">
+                   <input type="hidden" name="id" class="form-control m-auto w-75" placeholder="Nombre" value="<?php echo $id; ?>" required>
                </div>
                <div class="form-group">
-                   <input type="text" name="nombre" class="form-control m-auto w-75" placeholder="Nombre" value="<?php echo $nombre; ?>">
+                   <input type="text" name="nombre" class="form-control m-auto w-75" placeholder="Nombre" value="<?php echo $nombre; ?>" required>
                </div>
                <div class="form-group">
-                   <input type="text" name="cantidad" class="form-control m-auto w-75" placeholder="Cantidad" value="<?php echo $cantidad; ?>">
+                   <input type="text" name="cantidad" class="form-control m-auto w-75" placeholder="Cantidad" value="<?php echo $cantidad; ?>" required>
                </div>
                <div class="form-group">
-                   <input type="text" name="precio" class="form-control m-auto w-75" placeholder="Precio Unidad" value="<?php echo $precio; ?>">
+                   <input type="text" name="precio" class="form-control m-auto w-75" placeholder="Precio Unidad" value="<?php echo $precio; ?>" required>
                </div>
                <div class="form-group">
-                   <input type="text" name="peso" class="form-control m-auto w-75" placeholder="Peso" value="<?php echo $peso; ?>">
+                   <input type="text" name="peso" class="form-control m-auto w-75" placeholder="Peso" value="<?php echo $peso; ?>" required>
                </div>
                <div class="form-group">
-                   <select name="bodega" id="bodega" class="form-control w-75 m-auto">
+                   <select name="bodega" id="bodega" class="form-control w-75 m-auto" required>
                        <option value="<?php echo $bodega?>">
                        <?php  if($edit == false){?>
                          Seleccione
@@ -94,14 +90,14 @@
                        <?php }?>
                    </select>
                </div>
-                <div class="form-group">
-                   <div class="form-control w-75 m-auto" id="div_file">
-                      <p id="texto">Agregar Foto</p>
-                       <input type="file" name="subir_documento" id="subir_documento" class="form-control m-auto file">
-                    </div>
+               <div class="form-group">
+                   <textarea name="descripcion" rows="4" class="form-control w-75 m-auto" placeholder="Descripcion" required><?php echo $descripcion; ?></textarea>
                </div>
                <div class="form-group">
-                   <textarea name="descripcion" rows="4" class="form-control w-75 m-auto" placeholder="Descripcion"><?php echo $descripcion; ?></textarea>
+                   <div class="form-control w-75 m-auto" id="div_file">
+                      <p id="texto">Agregar Foto</p>
+                       <input type="file" name="subir_documento" id="subir_documento" class="form-control m-auto file" required>
+                    </div>
                </div>
                <div class="form-group" align="center">
                       <?php  if($edit == false){?>
@@ -115,7 +111,7 @@
        </div>
    </div>
    
-   <div class="col-sm-12 col-md-12 col-lg-9 p-2">
+   <div class="col-sm-12 col-md-12 col-lg-9">
       <div class="p-2">
       <div class="p-2">
        <table class="table table-bordered">
