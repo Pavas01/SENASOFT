@@ -1,14 +1,42 @@
 <?php require_once '../Includes/header.php'; ?>
-<center class="p-5">
-    <div class="container shadow-lg p-4">
-        <div class="d-flex flex-row m-auto">
-          <div class="m-auto p-2">
-           <a href="" class="btn btn-success m-auto p-2">Productos</a>
-           <a href="agregar_empresas.php" class="btn btn-success  m-auto  p-2">Empresas</a>
-            <a href="" class="btn btn-success  m-auto p-2 ">Clientes</a>
-            <a href="agregar_bodegas.php" class="btn btn-success  m-auto  p-2">Bodegas</a>
-            </div>
-        </div>
+
+<style>
+    body{
+        background-image: url(../Img/admin.jpg);
+</style>
+
+
+<div class="navbar">
+<ul class="nav nav-pills">
+    <li class="nav-item dropdown">
+        <a class="nav-link  text-dark bg-dark p-1" data-toggle="dropdown" href="#"><h2 class="text-light">
+        <i class="fas fa-cog"></i> AGREGAR</h2></a>
+    <div class="dropdown-menu bg-dark">
+        <a class="dropdown-item bg-dark text-light m-auto" href="#"><i class="fab fa-product-hunt"></i> PRODUCTOS</a>
+        <a class="dropdown-item bg-dark text-light m-auto" href="agregar_empresas.php"><i class="fas fa-hotel"></i> EMPRESAS</a>
+        <a class="dropdown-item bg-dark text-light m-auto" href="agregar_bodegas.php"><i class="fas fa-home"></i> BODEGAS</a>
+        <a class="dropdown-item bg-dark text-light m-auto" href="#"><i class="fas fa-users"></i> CLIENTES</a>
     </div>
-</center>
+    </li>
+</ul>
+
+<ul class="nav nav-pills">
+    <li class="nav-item dropdown">
+        <a class="nav-link  text-dark bg-dark p-1" data-toggle="dropdown" href="#"><h2 class="text-light">
+        <i class="fas fa-user-circle"></i> CUENTA</h2></a>
+    <div class="dropdown-menu bg-dark">
+        <a class="dropdown-item bg-dark text-light m-auto" href="#">
+        <i class="fas fa-user "></i> VER CUENTA
+           </a>
+        <a class="dropdown-item bg-dark text-light m-auto" href="../Includes/cerrar_sesion.php">
+        <i class="fas fa-power-off"></i> CERRAR</a>
+    </div>
+    </li>
+</ul>
+</div>
+
+<div class="container shadow-lg">
+    
+</div>
+
 <?php require_once '../Includes/footer.php'; ?>

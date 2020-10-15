@@ -11,14 +11,14 @@
         <style>
             
         .centrar{
-            transform: translate(0%, 30%);
+            transform: translate(0%, 10%);
         }
         </style>
 </head>
 <body> 
-<div class="container p-4 centrar">
+<div class="container centrar">
     <strong >
-        <h4 class="text-center">INICIAR SESION</h4>
+        <div class="text-center logo"><img src="Img/senasoft.png" width="200px" height="80px"></div>
         <?php 
         session_start();
         if (isset($_SESSION['invitado'])) {
@@ -31,7 +31,7 @@
         }
         ?>
     </strong><hr>
-    <center class="border rounded">
+    <center class="border bg-light rounded">
         <div class="container p-4" align="center">
 
             <form action="login.php" class="inicio_sesion w-50" autocomplete="off" method="POST">
