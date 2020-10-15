@@ -8,9 +8,19 @@ $rol=mysqli_query($conexion,$idrol);
 ?>
 
 <style>
+    body{
+        overflow-x: hidden;
+    }
+    
     .hidden{
         display: none;
     }
+    
+    @media screen and (max-width: 990px) {
+    .res{
+        display: none;
+    }
+}
 </style>
 
 <div class="row" style="padding-top:20px;">
@@ -20,9 +30,9 @@ $rol=mysqli_query($conexion,$idrol);
             <table class="table table-bordered bg-light text-center">
                 <thead class="thead-dark">
                    <th class="hidden">#</th>
-                    <th>Nombre / Apellido</th>
-                    <th>Documento</th>
-                    <th>Correo</th>
+                    <th>Nombre</th>
+                    <th class="res">Documento</th>
+                    <th class="res">Correo</th>
                     <th>Asignar Rol</th>
                 </thead>
                 <tbody>
@@ -32,9 +42,9 @@ $rol=mysqli_query($conexion,$idrol);
                     while($row=mysqli_fetch_array($result)){?>
                     <tr>
                         <td class="hidden"><?php echo $row[0] ?></td>
-                        <td><?php echo $row[1] ." ". $row[2] ?></td>
-                        <td><?php echo $row[4] ?></td>
-                        <td><?php echo $row[7] ?></td>
+                        <td class=""><?php echo $row[1]?></td>
+                        <td class="res"><?php echo $row[4] ?></td>
+                        <td class="res"><?php echo $row[7] ?></td>
                         <td>
                             <a href="#" class="btn btn-warning edit">
                                 <i class="fas fa-plus"></i>
