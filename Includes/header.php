@@ -17,4 +17,3 @@
       <a class="navbar-brand text-light" href="index.php"><h2><i class="fas fa-sync-alt"></i>SENASOFT</h2></a>
 </nav>
     
-  </div>

@@ -1,4 +1,5 @@
-<?php
+<!-- cerrar sesion-->
+   <?php
     session_start();
 
      if(isset($_SESSION['usuario'])){

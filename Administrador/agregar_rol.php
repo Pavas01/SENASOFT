@@ -90,7 +90,7 @@ $rol=mysqli_query($conexion,$idrol);
             </div>
         </div>
     </div>
-    
+    <!-- script open modal y obtencion de datos-->
 <script>
     $(document).ready(function (){
         $('.edit').on('click', function(){

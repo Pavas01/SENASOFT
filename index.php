@@ -3,12 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <title>LOGIN</title>
+      
        <link rel="shortcut icon" href="Img/name.ico" />
         <!--LIBRERIAS BOOTSTRAP-->
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
         <script src="https://kit.fontawesome.com/9ee254a0d0.js" crossorigin="anonymous"></script>
         <script type="text/javascript" src="http://code.jquery.com/jquery.js"></script>
         
+        <!-- estilo centrar index-->
         <style>
             
         .centrar{
@@ -20,6 +22,7 @@
 <div class="container centrar">
     <strong >
         <div class="text-center logo"><img src="Img/senasoft.png" width="200px" height="80px"></div><br>
+        <!--variables en sesiones para mensaje a usuarios index -->
         <?php 
         session_start();
         if (isset($_SESSION['invitado'])) {
@@ -34,7 +37,7 @@
     </strong><hr>
     <center class="border bg-light rounded">
         <div class="container p-4" align="center">
-
+                <!-- formulario inicio de sesion -->
             <form action="login.php" class="inicio_sesion w-50" autocomplete="off" method="POST">
                 <div class="form-group" style="padding-right: 4px; ">
                     <div class="input-group user">

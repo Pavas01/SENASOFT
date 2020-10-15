@@ -50,6 +50,7 @@
         $bodegass="SELECT * FROM bodega";
         $bodegas=mysqli_query($conexion,$bodegass);
 ?>
+<!-- formulario agregar productos-->
 
 <div class="row">
    <div class="col-sm-12 col-md-12 col-lg-3 m-auto">
@@ -110,7 +111,7 @@
            </div>
        </div>
    </div>
-   
+   <!-- tabla productos-->
    <div class="col-sm-12 col-md-12 col-lg-9">
       <div class="p-2">
       <div class="p-2">

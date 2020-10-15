@@ -1,3 +1,4 @@
+<!-- funcion para mostrar error en los capos de registro usuario-->
 <?php
 function mostrarError($errores, $campo){
 	$alerta = '';
@@ -7,7 +8,7 @@ function mostrarError($errores, $campo){
 	
 	return $alerta;
 }
-
+//funciones para borrar sesiones
 function borrarErrores(){
 	$borrado = false;
 	

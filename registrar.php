@@ -19,7 +19,7 @@ require_once 'includes/helpers.php';
 <center class="col-sm-4 m-auto">
     <div class=" w-50">
        <strong><h4>REGISTRO PERSONA</h4></strong>
-   
+        <!-- formulario para registrar usuarios-->
        <form action="registroUsuarios.php" method="POST" autocomplete="off" class="p-2 ">
        <!--mostrar errores registro-->
                     <?php if(isset($_SESSION['completado'])): ?>

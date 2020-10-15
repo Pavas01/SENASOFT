@@ -11,7 +11,7 @@
         }
     }
 </style>
-
+<!-- validacion del GET-->
 <?php
     if(isset($_GET['edit'])){
         $id=$_GET['edit'];
@@ -24,6 +24,7 @@
         $correo=$row['correo'];
     }
 ?>
+<!-- formulario de agregar empresa-->
 
 <div class="row"> 
     <div class="col-sm-12 col-md-12 col-lg-3">
